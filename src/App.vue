@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yorick Schilling</title>
-    <link rel="stylesheet" href="/build/output.css" />
-    <link rel="stylesheet" href="/build/style.css" />
-  </head>
+<script setup>
 
-  <body class="bg-black text-white">
+</script>
+
+<template>
+  <div class="bg-black text-white h-screen w-screen ">
     <section class="h-screen grid grid-cols-12 grid-rows-3 content-center">
       <div class="row-start-1 col-start-10 self-start mt-24">
         <a
@@ -25,5 +20,9 @@
         </b>
       </p>
     </section>
-  </body>
-</html>
+  </div>
+</template>
+
+<style scoped>
+
+</style>
