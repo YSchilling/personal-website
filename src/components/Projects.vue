@@ -1,0 +1,27 @@
+<script setup>
+import ProjectCard from './ProjectCard.vue';
+
+</script>
+
+<template>
+  <section class="min-h-screen grid grid-cols-12 grid-rows-3">
+    <h2 class="row-start-1 col-start-3 col-span-8 text-4xl self-end mb-8 font-roboto">// Projects</h2>
+    <swiper-container
+    :slides-per-view="3"
+    :space-between="spaceBetween"
+    @progress="onProgress"
+    @slidechange="onSlideChange"
+    class="row-start-2 col-start-3 col-span-8 w-full h-max">
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+        <swiper-slide><ProjectCard></ProjectCard></swiper-slide>
+    </swiper-container>
+  </section>
+</template>
+
+<style scoped>
+</style>
