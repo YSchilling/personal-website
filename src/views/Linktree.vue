@@ -1,9 +1,9 @@
 <script setup>
-    
+
 </script>
 
 <template>
-    <router-view />
+  <div>Linktree</div>
 </template>
 
 <style scoped>
