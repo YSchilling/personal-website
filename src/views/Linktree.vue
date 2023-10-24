@@ -29,3 +29,4 @@ import PersonalWebsiteIcon from '../components/icons/PersonalWebsiteIcon.vue'
     </a>
   </div>
 </template>
+
