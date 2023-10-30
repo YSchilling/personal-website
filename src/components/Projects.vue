@@ -1,6 +1,6 @@
 <script setup>
 import ProjectCard from './ProjectCard.vue';
-
+import projects from '../data/projects.json';
 </script>
 
 <template>
@@ -14,26 +14,8 @@ import ProjectCard from './ProjectCard.vue';
         slidesPerView: 3,
       },
     }" class="swiper row-start-2 col-start-3 col-span-8 w-full h-max">
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
-      </swiper-slide>
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
-      </swiper-slide>
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
-      </swiper-slide>
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
-      </swiper-slide>
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
-      </swiper-slide>
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
-      </swiper-slide>
-      <swiper-slide>
-        <ProjectCard></ProjectCard>
+      <swiper-slide v-for="project in projects">
+        <ProjectCard :project-data="project"></ProjectCard>
       </swiper-slide>
     </swiper-container>
   </section>

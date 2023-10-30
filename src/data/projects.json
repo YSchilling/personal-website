@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Portfolio Website",
+        "imgURL": "",
+        "description": "This is the website you are currently looking at :)",
+        "githubURL": "https://github.com/YSchilling/personal-website"
+    },
+    {
+        "title": "Snakepy",
+        "imgURL": "",
+        "description": "A snake game made with python and pygame!",
+        "githubURL": "https://github.com/YSchilling/snakepy"
+    }
+]
