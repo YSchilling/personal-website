@@ -1,13 +1,13 @@
 [
     {
         "title": "Portfolio Website",
-        "imgURL": "",
+        "imgURL": "src/assets/media/personal_website.jpg",
         "description": "This is the website you are currently looking at :)",
         "githubURL": "https://github.com/YSchilling/personal-website"
     },
     {
         "title": "Snakepy",
-        "imgURL": "",
+        "imgURL": "src/assets/media/snakepy.png",
         "description": "A snake game made with python and pygame!",
         "githubURL": "https://github.com/YSchilling/snakepy"
     }
