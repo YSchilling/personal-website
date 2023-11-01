@@ -2,11 +2,12 @@
 import GitHubIcon from './icons/GitHubIcon.vue'
 
 const props = defineProps(['projectData'])
+const imgURL = new URL(`../assets/media/${props.projectData.fileName}`, import.meta.url).href
 </script>
 
 <template>
   <div class="bg-gray-900 border border-transparent rounded p-4 flex flex-col w-80 flex-shrink-0">
-    <img :src="projectData.imgURL" alt="" class="mb-6">
+    <img :src="imgURL" alt="" class=" mb-6">
     <h3 class="text-2xl mb-3"><b>{{ projectData.title }}</b></h3>
     <p class="mb-10">{{ projectData.description }}</p>
     <button class="w-max mb-5">> Show tech stack</button>
