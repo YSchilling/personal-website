@@ -1,5 +1,6 @@
 <script setup>
 import GitHubIcon from './icons/GitHubIcon.vue'
+import ExpandableButton from './ExpandableButton.vue';
 
 const props = defineProps(['projectData'])
 const imgURL = new URL(`../assets/media/${props.projectData.fileName}`, import.meta.url).href
@@ -10,7 +11,7 @@ const imgURL = new URL(`../assets/media/${props.projectData.fileName}`, import.m
     <img :src="imgURL" alt="" class=" mb-6">
     <h3 class="text-2xl mb-3"><b>{{ projectData.title }}</b></h3>
     <p class="mb-10">{{ projectData.description }}</p>
-    <button class="w-max mb-5">> Show tech stack</button>
+    <ExpandableButton class="w-max mb-5" title="Show tech stack" :tech-stack="projectData.techStack" />
     <a v-if="projectData.githubURL != ''" href=""
       class="flex items- gap-4 border border-white rounded-xl py-2 px-4 w-max font-roboto hover:bg-white hover:text-black">
       <GitHubIcon></GitHubIcon>GitHub

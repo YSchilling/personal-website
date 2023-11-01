@@ -3,12 +3,14 @@
         "title": "Portfolio Website",
         "fileName": "personal_website.jpg",
         "description": "This is the website you are currently looking at :)",
+        "techStack": ["Vue", "TailwindCSS"],
         "githubURL": "https://github.com/YSchilling/personal-website"
     },
     {
         "title": "Snakepy",
         "fileName": "snakepy.png",
         "description": "A snake game made with python and pygame!",
+        "techStack": ["Python", "Pygame"],
         "githubURL": "https://github.com/YSchilling/snakepy"
     }
 ]
