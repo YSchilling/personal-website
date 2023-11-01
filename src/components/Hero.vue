@@ -9,7 +9,7 @@
     <h1
       class="text-4xl md:text-5xl xl:text-6xl row-start-2 justify-self-center md:justify-self-start md:col-start-3 col-span-8 leading-tight flex items-center text-center md:text-left">
       <b>
-        Hey! I'm <span class="text-green-400">Yorick Schilling</span><br />
+        Hey! I'm <span id="title">Yorick Schilling</span><br />
         A young Software Engineer <br />
         & Entrepreneurship Enthusiast!
       </b>
@@ -17,4 +17,8 @@
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+#title {
+  color: var(--highlight-color)
+}
+</style>
