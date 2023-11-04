@@ -17,9 +17,9 @@ const imgURL = new URL(
     </h3>
     <p class="mb-10">{{ projectData.description }}</p>
     <ExpandableButton class="w-max mb-5" :tech-stack="projectData.techStack" />
-    <a v-if="projectData.githubURL != ''" href=""
+    <a v-if="projectData.githubURL != ''" :href="projectData.githubURL" target="_blank"
       class="flex items- gap-4 border border-white rounded-xl py-2 px-4 w-max font-roboto hover:bg-white hover:text-black">
-      <GitHubIcon></GitHubIcon>GitHub
+      <GitHubIcon />GitHub
     </a>
   </div>
 </template>
