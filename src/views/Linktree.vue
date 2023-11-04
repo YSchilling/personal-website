@@ -3,6 +3,7 @@ import LinktreeItem from '../components/LinktreeItem.vue';
 import GitHubIconSVG from '../components/icons/GitHubIconSVG.vue'
 import LinkedinIcon from '../components/icons/LinkedinIcon.vue'
 import PersonalWebsiteIcon from '../components/icons/PersonalWebsiteIcon.vue'
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
