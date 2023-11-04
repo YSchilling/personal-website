@@ -5,7 +5,7 @@
 <template>
     <section class="grid grid-cols-12 items-center justify-items-center h-16">
         <div id="line" class="w-full h-px col-start-3 col-span-8 self-start bg-white from-black"></div>
-        <div class="col-start-3 col-span-8">Yorick Schilling</div>
+        <div class="col-start-3 col-span-8">©2023 Yorick Schilling</div>
     </section>
 </template>
 

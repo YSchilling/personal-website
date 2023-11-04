@@ -4,7 +4,7 @@ import projects from "../data/projects.json";
 </script>
 
 <template>
-  <section class="min-h-screen grid grid-cols-12 grid-rows-3">
+  <section class="grid grid-cols-12">
     <h2 class="row-start-1 col-start-2 col-span-10 md:col-start-3 md:col-span-8 text-4xl self-end mb-8 font-roboto">
       // Projects
     </h2>
@@ -17,4 +17,9 @@ import projects from "../data/projects.json";
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+section {
+  grid-template-rows: max-content 1fr;
+  margin-bottom: 512px;
+}
+</style>
