@@ -9,7 +9,7 @@ const isToggled = ref(false);
   <div class="flex flex-col w-fit">
     <button
       @click="isToggled = !isToggled"
-      class="w-max mb-2 duration-200 border-b-2 border-b-white hover:border-b-transparent"
+      class="w-max mb-2 duration-200 border-b-2 hover:border-b-transparent"
     >
       Show tech stack
     </button>
