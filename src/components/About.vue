@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="grid grid-cols-12 grid-rows-3">
+  <section class="grid grid-cols-12">
     <h2
       class="row-start-1 col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-4xl self-end mb-8 font-roboto"
     >
@@ -33,4 +33,8 @@
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+section {
+  grid-template-rows: max-content 1fr 1fr;
+}
+</style>

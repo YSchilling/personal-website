@@ -6,7 +6,7 @@ import FancyButton from "./FancyButton.vue";
   <section class="grid grid-cols-12 grid-rows-3 min-h-screen">
     <router-link
       to="/linktree"
-      class="col-start-9 col-span-3 lg:col-start-9 lg:col-span-2 justify-self-end mt-24"
+      class="col-start-9 col-span-3 lg:col-start-9 lg:col-span-2 justify-self-end my-24 lg:mt-24"
       ><FancyButton>Linktree</FancyButton></router-link
     >
     <h1
@@ -24,5 +24,10 @@ import FancyButton from "./FancyButton.vue";
 <style scoped>
 #title {
   color: var(--highlight-color);
+}
+@media (max-width: 1024px) {
+  section {
+    grid-template-rows: max-content 1fr 1fr;
+  }
 }
 </style>
