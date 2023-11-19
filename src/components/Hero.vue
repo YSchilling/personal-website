@@ -3,8 +3,10 @@ import FancyButton from "./FancyButton.vue";
 </script>
 
 <template>
-  <section class="min-h-screen grid grid-rows-3 grid-cols-12">
-    <router-link to="/linktree" class="col-start-10 mt-24"
+  <section class="grid grid-cols-12 grid-rows-3 min-h-screen">
+    <router-link
+      to="/linktree"
+      class="col-start-9 col-span-3 lg:col-start-9 lg:col-span-2 justify-self-end mt-24"
       ><FancyButton>Linktree</FancyButton></router-link
     >
     <h1
