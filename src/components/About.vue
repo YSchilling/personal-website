@@ -8,7 +8,7 @@
       // About
     </h2>
     <p
-      class="row-start-2 row-span-2 col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-xl text-justify lg:text-start"
+      class="row-start-2 row-span-2 col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 lg:text-xl"
     >
       Ich war schon immer ein neugieriger Mensch, der sich für viele
       verschiedene Themen interessiert. Wenn ich ein Thema für mich gefunden
