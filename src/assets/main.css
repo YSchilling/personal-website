@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap");
 
 :root {
-    --main-bg-color: #000000;
-    --main-text-color: #FFFFFF;
-    --highlight-color: #0BDA57;
-    --secondary-highlight-color: #22C55E;
-    --tertiary-highlight-color: #39AC63;
+  --main-bg-color: #111111;
+  --main-text-color: #ffffff;
+  --highlight-color: #0bda57;
+  --secondary-highlight-color: #22c55e;
+  --tertiary-highlight-color: #39ac63;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: "Poppins", sans-serif;
 }
 
 .font-roboto {
-    font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
