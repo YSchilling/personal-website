@@ -1,6 +1,6 @@
 <script setup>
 import GitHubIcon from "./icons/GitHubIcon.vue";
-import ExpandableButton from "./ExpandableButton.vue";
+import TechStackButton from "./TechStackButton.vue";
 import FancyButton from "./FancyButton.vue";
 
 const props = defineProps(["projectData"]);
@@ -17,7 +17,7 @@ const imgURL = new URL(
       <b>{{ projectData.title }}</b>
     </h3>
     <p class="mb-10">{{ projectData.description }}</p>
-    <ExpandableButton class="w-max mb-5" :tech-stack="projectData.techStack" />
+    <TechStackButton class="w-max mb-5" :tech-stack="projectData.techStack" />
     <a
       v-if="projectData.githubURL != ''"
       :href="projectData.githubURL"

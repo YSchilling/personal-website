@@ -2,9 +2,9 @@
 
 <template>
   <div id="wrapper" class="w-min">
-    <button class="flex justify-center gap-2 px-4 py-3">
+    <div id="button" class="flex justify-center gap-2 px-4 py-3">
       <slot />
-    </button>
+    </div>
   </div>
 </template>
 
@@ -13,15 +13,15 @@
   position: relative;
 }
 
-button {
+#button {
   transition: color 0.3s;
 }
 
-button:hover {
+#button:hover {
   color: var(--highlight-color);
 }
 
-button::before {
+#button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -33,11 +33,11 @@ button::before {
   transition: opacity 0.3s;
 }
 
-button:hover::before {
+#button:hover::before {
   opacity: 0;
 }
 
-button::after {
+#button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -49,7 +49,7 @@ button::after {
   opacity: 0;
   transition: transform 0.3s, opacity 0.3s;
 }
-button:hover::after {
+#button:hover::after {
   transform: scaleX(1) scaleY(1);
   opacity: 1;
 }
