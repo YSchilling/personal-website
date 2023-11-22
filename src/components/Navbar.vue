@@ -5,6 +5,9 @@ import FancyButton from "./FancyButton.vue";
 <template>
   <ul class="flex gap-4">
     <li>
+      <router-link to="/"><FancyButton>Home</FancyButton></router-link>
+    </li>
+    <li>
       <router-link to="/sketches"
         ><FancyButton>Sketches</FancyButton></router-link
       >
