@@ -5,7 +5,7 @@ import FancyButton from "./FancyButton.vue";
 
 const props = defineProps(["projectData"]);
 const imgURL = new URL(
-  `../assets/media/${props.projectData.fileName}`,
+  `../assets/media/projects/${props.projectData.fileName}`,
   import.meta.url
 ).href;
 </script>
@@ -18,12 +18,10 @@ const imgURL = new URL(
     </h3>
     <p class="mb-10">{{ projectData.description }}</p>
     <TechStackButton class="w-max mb-5" :tech-stack="projectData.techStack" />
-    <a
-      v-if="projectData.githubURL != ''"
-      :href="projectData.githubURL"
-      target="_blank"
-    >
-      <FancyButton><GitHubIcon />GitHub</FancyButton>
+    <a v-if="projectData.githubURL != ''" :href="projectData.githubURL" target="_blank">
+      <FancyButton>
+        <GitHubIcon />GitHub
+      </FancyButton>
     </a>
   </div>
 </template>
