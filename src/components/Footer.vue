@@ -16,6 +16,6 @@ section {
 
 #line {
     background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(90deg, rgb(17, 17, 17) 0%, rgb(255, 255, 255) 50%, rgb(17, 17, 17) 100%);
 }
 </style>
