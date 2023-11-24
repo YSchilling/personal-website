@@ -6,9 +6,9 @@ import Footer from "../components/Footer.vue";
 </script>
 
 <template>
-  <Hero></Hero>
-  <About></About>
-  <Projects></Projects>
+  <Hero />
+  <About />
+  <Projects />
   <Footer />
 </template>
 
