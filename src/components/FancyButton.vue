@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div id="wrapper" class="w-min">
+  <div id="wrapper" class="w-max">
     <div id="button" class="flex justify-center gap-2 px-4 py-3">
       <slot />
     </div>
@@ -49,6 +49,7 @@
   opacity: 0;
   transition: transform 0.3s, opacity 0.3s;
 }
+
 #button:hover::after {
   transform: scaleX(1) scaleY(1);
   opacity: 1;
