@@ -8,8 +8,9 @@ import GitHubIcon from "./icons/GitHubIcon.vue";
 <template>
   <section class="grid grid-cols-12 mb-64">
     <h2 class="col-start-2 col-span-10 md:col-start-3 md:col-span-8 text-4xl self-end mb-8 font-roboto">
-      // Projects
+      // <span id="title">Projects</span>
     </h2>
+    <h2 class="col-start-3 col-span-8 font-roboto mb-16">// Swipe to switch between projects!</h2>
     <swiper-container free-mode="true" slides-per-view="auto" space-between="30"
       class="swiper col-start-2 col-span-10 md:col-start-3 md:col-span-8 w-full h-max">
       <swiper-slide v-for="project in projects" class="max-w-md">
@@ -25,4 +26,8 @@ import GitHubIcon from "./icons/GitHubIcon.vue";
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+#title {
+  color: var(--highlight-color);
+}
+</style>
