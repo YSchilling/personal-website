@@ -32,6 +32,6 @@ const imgURL = new URL(
 }
 
 img {
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
 }
 </style>

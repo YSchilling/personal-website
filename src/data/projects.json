@@ -12,5 +12,12 @@
         "description": "A snake game made with python and pygame!",
         "techStack": ["Python", "Pygame"],
         "githubURL": "https://github.com/YSchilling/snakepy"
+    },
+    {
+        "title": "Reiki Website",
+        "fileName": "reiki_website.png",
+        "description": "My first client project!",
+        "techStack": ["HTML", "TailwindCSS", "JavaScript"],
+        "githubURL": "https://github.com/YSchilling/reiki-website"
     }
 ]
