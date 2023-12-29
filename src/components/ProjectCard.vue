@@ -13,7 +13,7 @@ const imgURL = new URL(
 <template>
   <div class="border border-white rounded p-4 flex flex-col flex-shrink-0 mx-4">
     <img :src="imgURL" alt="" class="mb-6 border border-white" />
-    <h3 id="title" class="text-2xl mb-3">
+    <h3 class="text-highlight text-2xl mb-3">
       <b>{{ projectData.title }}</b>
     </h3>
     <p class="mb-10">{{ projectData.description }}</p>
@@ -27,10 +27,6 @@ const imgURL = new URL(
 </template>
 
 <style scoped>
-#title {
-  color: var(--highlight-color);
-}
-
 img {
   aspect-ratio: 3/2;
 }

@@ -5,7 +5,7 @@
     <h2
       class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-4xl self-end mb-8 font-roboto"
     >
-      // <span id="title">About</span>
+      // <span class="text-highlight">About</span>
     </h2>
     <p class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 lg:text-xl">
       Ich war schon immer ein neugieriger Mensch, der sich für viele
@@ -30,9 +30,3 @@
     </p>
   </section>
 </template>
-
-<style scoped>
-#title {
-  color: var(--highlight-color);
-}
-</style>
