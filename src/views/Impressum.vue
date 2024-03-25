@@ -11,7 +11,7 @@ let contact = `<c pynff="zo-4">
             <c pynff="zo-8">
                 <o>Xbagnxg:</o><oe>
                 Gryrsba: <n uers="gry:+491725872786" pynff="haqreyvar ubire:ab-haqreyvar">+49 172 5872786</n><oe>
-                R-Znvy: <n uers='znvygb:l.fpuvyyvat-ohfvarff@cebgba.zr' pynff="haqreyvar ubire:ab-haqreyvar">l.fpuvyyvat-ohfvarff@cebgba.zr</n>
+                R-Znvy: <n uers='znvygb:pbagnpg@lbevpxfpuvyyvat.pbz' pynff="haqreyvar ubire:ab-haqreyvar">pbagnpg@lbevpxfpuvyyvat.pbz</n>
             </c>`;
 
 const isHidingContacts = ref(true);
