@@ -10,12 +10,12 @@
     <p class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 lg:text-xl">
       Ich war schon immer ein neugieriger Mensch, der sich für viele
       verschiedene Themen interessiert. Wenn ich ein Thema für mich gefunden
-      habe, dann kann ich Stunden damit verbringen es zu studieren. Am liebsten
+      habe, dann kann ich Stunden damit verbringen, es zu studieren. Am liebsten
       gehe ich dabei mit anderen in den Diskurs und freue mich immer darüber,
       wenn man gegenseitig voneinander lernen kann.
       <br /><br />
       Ein Thema, welches in den letzten Jahren mein Leben erfüllt hat, ist die
-      Informatik. Durch meinen Hintergrund im Gaming habe ich damit angefangen
+      Informatik. Durch meinen Hintergrund im Gaming, habe ich damit angefangen
       Spiele in Python zu programmieren. Relativ schnell hat sich mein Interesse
       ausgebreitet und mich haben nicht nur der Code, sondern auch die Theorie
       angefangen zu interessieren.
