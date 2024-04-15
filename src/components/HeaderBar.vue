@@ -12,59 +12,59 @@ function toggleBurger() {
 </script>
 
 <template>
-  <!--START Desktop Navbar Menu-->
-  <header
-    class="col-start-3 col-span-8 mt-24 hidden lg:flex items-center justify-between h-6"
-  >
-    <div class="flex items-center">
+  <header class="flex col-start-3 col-span-8 mt-16 lg:mt-24 mb-24 items-center justify-between h-6">
+    <!-- START Desktop -->
+    <div class="hidden lg:flex items-center">
       <img src="/logo.svg" alt="Logo" />
       <h2 class="text-2xl">Yorick Schilling</h2>
     </div>
-    <ul class="flex gap-4">
+    <ul class="hidden lg:flex gap-4">
       <li>
-        <router-link to="/"><FancyButton>Home</FancyButton></router-link>
+        <router-link to="/">
+          <FancyButton>Home</FancyButton>
+        </router-link>
       </li>
       <li>
-        <router-link to="/sketches"
-          ><FancyButton>Sketches</FancyButton></router-link
-        >
+        <router-link to="/sketches">
+          <FancyButton>Sketches</FancyButton>
+        </router-link>
       </li>
       <li>
-        <router-link to="/linktree"
-          ><FancyButton>Linktree</FancyButton></router-link
-        >
+        <router-link to="/linktree">
+          <FancyButton>Linktree</FancyButton>
+        </router-link>
       </li>
     </ul>
+    <!-- END Desktop -->
+
+    <!-- START Mobile -->
+    <img id="burger-logo" src="/logo.svg" alt="Logo" class="lg:hidden" />
+    <div @click="toggleBurger" id="burger-menu" class="lg:hidden">
+      <span></span>
+    </div>
+    <!-- END Mobile -->
   </header>
-  <!--END Desktop Navbar Menu-->
-  <!--START Mobile Burger Menu-->
-  <div
-    @click="toggleBurger"
-    id="burger-menu"
-    class="lg:hidden col-start-10 col-span-2 justify-self-end mt-8"
-  >
-    <span></span>
-  </div>
+  <!-- START BURGER -->
   <div id="menu" class="lg:hidden">
     <ul>
       <li class="flex justify-center">
-        <router-link to="/" class="w-max"
-          ><FancyButton>Home</FancyButton></router-link
-        >
+        <router-link to="/" class="w-max">
+          <FancyButton>Home</FancyButton>
+        </router-link>
       </li>
       <li class="flex justify-center">
-        <router-link to="/sketches" class="w-max"
-          ><FancyButton>Sketches</FancyButton></router-link
-        >
+        <router-link to="/sketches" class="w-max">
+          <FancyButton>Sketches</FancyButton>
+        </router-link>
       </li>
       <li class="flex justify-center">
-        <router-link to="/linktree" class="w-max"
-          ><FancyButton>Linktree</FancyButton></router-link
-        >
+        <router-link to="/linktree" class="w-max">
+          <FancyButton>Linktree</FancyButton>
+        </router-link>
       </li>
     </ul>
+    <!-- END BURGER -->
   </div>
-  <!--END Mobile Burger Menu-->
 </template>
 
 <style scoped>
@@ -77,6 +77,7 @@ function toggleBurger() {
   position: relative;
   z-index: 2;
 }
+
 #burger-menu span,
 #burger-menu span:before,
 #burger-menu span:after {
@@ -87,35 +88,42 @@ function toggleBurger() {
   position: absolute;
   transition: 0.3s ease-in-out;
 }
+
 #burger-menu span:before,
 #burger-menu span:after {
   content: "";
 }
+
 #burger-menu span:before {
   left: 0px;
   top: -10px;
   width: 27px;
 }
+
 #burger-menu span {
   right: 0px;
   top: 13px;
   width: 27px;
 }
+
 #burger-menu span:after {
   left: 0px;
   top: 10px;
   width: 27px;
 }
+
 #burger-menu.close span:before {
   top: 0px;
   transform: rotate(90deg);
   width: 27px;
 }
+
 #burger-menu.close span {
   transform: rotate(-45deg);
   top: 13px;
   width: 27px;
 }
+
 #burger-menu.close span:after {
   top: 0px;
   left: 0;
@@ -137,18 +145,22 @@ function toggleBurger() {
   padding-top: 20px;
   transition: all 0.3s ease-in-out;
 }
+
 #menu.overlay {
   visibility: visible;
   opacity: 1;
   padding-top: 100px;
   background: rgba(0, 0, 0, 0.5);
 }
+
 #menu ul {
   padding: 0;
 }
+
 #menu li {
   list-style: none;
 }
+
 #menu a {
   color: #fff;
   display: block;

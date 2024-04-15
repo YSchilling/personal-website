@@ -1,5 +1,5 @@
 <script setup>
-import Header from "../components/Header.vue";
+import HeaderBar from "../components/HeaderBar.vue";
 import Footer from "../components/Footer.vue";
 import { ref } from "vue";
 
@@ -32,19 +32,14 @@ function decode(string) {
 
 <template>
   <section id="mainsection" class="grid grid-cols-12">
-    <Header
-      class="col-start-9 col-span-3 lg:col-start-9 lg:col-span-2 justify-self-end my-24 lg:mt-24"
-    />
+    <HeaderBar />
     <h1 class="text-4xl md:text-5xl xl:text-6xl col-start-3 col-span-8 mb-8">
       <b>Impressum</b>
     </h1>
     <div class="col-start-3 col-span-8">
       <p class="mb-4">Angaben gemäß § 5 TMG</p>
-      <button
-        class="mb-4 text-highlight underline hover:no-underline"
-        v-if="isHidingContacts"
-        @click="isHidingContacts = false"
-      >
+      <button class="mb-4 text-highlight underline hover:no-underline" v-if="isHidingContacts"
+        @click="isHidingContacts = false">
         Show Contacts
       </button>
       <div v-else v-html="decode(contact)"></div>
@@ -114,13 +109,9 @@ function decode(string) {
       </p>
       <p class="mb-8">
         Website Impressum erstellt durch
-        <a href="https://www.impressum-generator.de" class="underlin"
-          >impressum-generator.de</a
-        >
+        <a href="https://www.impressum-generator.de" class="underlin">impressum-generator.de</a>
         von der
-        <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow"
-          >Kanzlei Hasselbach</a
-        >
+        <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Kanzlei Hasselbach</a>
       </p>
     </div>
   </section>
