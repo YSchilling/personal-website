@@ -21,3 +21,7 @@ body {
 .text-highlight {
   color: var(--highlight-color);
 }
+
+.movedCurtain {
+  top: -100%;
+}

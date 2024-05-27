@@ -1,15 +1,17 @@
-import './index.css'
-import './assets/main.css'
+import "./index.css";
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
 // import function to register Swiper custom elements
-import { register } from 'swiper/element/bundle'
+import { register } from "swiper/element/bundle";
 // register Swiper custom elements
-register()
+register();
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+const app = createApp(App);
+app.use(router);
+app.mount("#app");
+
+export default app;

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const loadingCurtain = ref();
 
@@ -7,7 +7,8 @@ function removeCurtain() {
   loadingCurtain.value.classList.toggle("movedCurtain");
 }
 
-window.addEventListener("load", removeCurtain);
+onMounted(() => window.addEventListener("load", removeCurtain));
+onUnmounted(() => window.removeEventListener("load", removeCurtain));
 </script>
 
 <template>
@@ -18,8 +19,4 @@ window.addEventListener("load", removeCurtain);
   <router-view />
 </template>
 
-<style scoped>
-.movedCurtain {
-  top: -100%;
-}
-</style>
+<style scoped></style>
