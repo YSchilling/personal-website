@@ -16,17 +16,17 @@ import PersonalWebsiteIcon from "../components/icons/PersonalWebsiteIcon.vue";
     <!-- START OF LIST -->
     <router-link to="/">
       <LinktreeItem title="Personal Website">
-        <PersonalWebsiteIcon />
+        <PersonalWebsiteIcon class="w-12 h-12" />
       </LinktreeItem>
     </router-link>
     <a href="https://linkedin.com/in/yschilling" target="_blank">
       <LinktreeItem title="LinkedIn">
-        <LinkedinIcon />
+        <LinkedinIcon class="w-12 h-12" />
       </LinktreeItem>
     </a>
     <a href="https://github.com/yschilling" target="_blank">
       <LinktreeItem title="GitHub">
-        <GitHubIconSVG />
+        <GitHubIconSVG class="w-12 h-12" />
       </LinktreeItem>
     </a>
     <div class="w-10/12 h-16 md:max-w-2xl px-3 py-2 my-2 flex justify-center items-end">
@@ -34,12 +34,17 @@ import PersonalWebsiteIcon from "../components/icons/PersonalWebsiteIcon.vue";
     </div>
     <a href="https://www.hackerrank.com/profile/yorick1" target="_blank">
       <LinktreeItem title="HackerRank">
-        <div class="w-12 h-12"></div>
+        <img
+          class="w-12 h-12"
+          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F40%2FHackerRank_Icon-1000px.png%2F480px-HackerRank_Icon-1000px.png&sp=1716895167Tf48196f86040495342e286761c8b3ff83bd4aa9650658eea0056e346696513c5"
+          alt="" />
       </LinktreeItem>
     </a>
     <a href="https://exercism.org/profiles/YSchilling" target="_blank">
       <LinktreeItem title="Exercism">
-        <div class="w-12 h-12"></div>
+        <img
+          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fuser-images.githubusercontent.com%2F38899847%2F48952150-634e9b80-eefe-11e8-890e-7a233d56df65.png&sp=1716895353T52196122e338ffabf2f3ecbad625f92b091afb5ff746b309a0b2ab08f44cc5b6"
+          alt="" />
       </LinktreeItem>
     </a>
   </div>
