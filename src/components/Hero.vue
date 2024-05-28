@@ -21,6 +21,8 @@ function writeHeader(text) {
   let timer = setInterval(onTick, 50);
   let char = 0;
 
+  intervalIDs.value.push(timer);
+
   function onTick() {
     header.value.innerHTML += text[char];
     char++;
@@ -35,6 +37,8 @@ function deleteHeader() {
   let timer = setInterval(onTick, 50);
   let char = 0;
   let text = header.value.innerHTML;
+
+  intervalIDs.value.push(timer);
 
   function onTick() {
     header.value.innerHTML = header.value.innerHTML.slice(0, -1);
@@ -54,7 +58,7 @@ function checkHeaderState() {
       headerAnimation.value.state = 2;
       break;
     case 1:
-      setTimeout(deleteHeader, 2 * 1000);
+      intervalIDs.value.push(setTimeout(deleteHeader, 2 * 1000));
       headerAnimation.value.state = 2;
       break;
   }
@@ -66,6 +70,7 @@ onMounted(() => {
 });
 onUnmounted(() => {
   intervalIDs.value.forEach((id) => clearInterval(id));
+  intervalIDs.value = [];
 });
 </script>
 

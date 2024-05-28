@@ -13,11 +13,11 @@ function toggleBurger() {
 
 <template>
   <header class="flex col-start-3 col-span-8 mt-16 lg:mt-24 mb-24 items-center justify-between h-6">
-    <!-- START Desktop -->
-    <div class="hidden lg:flex items-center">
+    <router-link to="/" class="flex items-center">
       <img src="/logo.svg" alt="Logo" />
-      <h2 class="text-2xl">Yorick Schilling</h2>
-    </div>
+      <h2 class="text-2xl hidden lg:block">Yorick Schilling</h2>
+    </router-link>
+    <!-- START Desktop -->
     <ul class="hidden lg:flex gap-4">
       <li>
         <router-link to="/">
@@ -38,7 +38,6 @@ function toggleBurger() {
     <!-- END Desktop -->
 
     <!-- START Mobile -->
-    <img id="burger-logo" src="/logo.svg" alt="Logo" class="lg:hidden" />
     <div @click="toggleBurger" id="burger-menu" class="lg:hidden">
       <span></span>
     </div>
