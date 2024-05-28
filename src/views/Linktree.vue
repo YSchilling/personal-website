@@ -36,14 +36,14 @@ import PersonalWebsiteIcon from "../components/icons/PersonalWebsiteIcon.vue";
       <LinktreeItem title="HackerRank">
         <img
           class="w-12 h-12"
-          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F40%2FHackerRank_Icon-1000px.png%2F480px-HackerRank_Icon-1000px.png&sp=1716895167Tf48196f86040495342e286761c8b3ff83bd4aa9650658eea0056e346696513c5"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png"
           alt="" />
       </LinktreeItem>
     </a>
     <a href="https://exercism.org/profiles/YSchilling" target="_blank">
       <LinktreeItem title="Exercism">
         <img
-          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fuser-images.githubusercontent.com%2F38899847%2F48952150-634e9b80-eefe-11e8-890e-7a233d56df65.png&sp=1716895353T52196122e338ffabf2f3ecbad625f92b091afb5ff746b309a0b2ab08f44cc5b6"
+          src="https://user-images.githubusercontent.com/38899847/48952150-634e9b80-eefe-11e8-890e-7a233d56df65.png"
           alt="" />
       </LinktreeItem>
     </a>
