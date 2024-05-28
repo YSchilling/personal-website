@@ -1,13 +1,10 @@
 <script setup>
-import GitHubIcon from "./icons/GitHubIcon.vue";
+import GitHubIconSVG from "./icons/GitHubIconSVG.vue";
 import TechStackButton from "./TechStackButton.vue";
 import FancyButton from "./FancyButton.vue";
 
 const props = defineProps(["projectData"]);
-const imgURL = new URL(
-  `../assets/media/projects/${props.projectData.fileName}`,
-  import.meta.url
-).href;
+const imgURL = new URL(`../assets/media/projects/${props.projectData.fileName}`, import.meta.url).href;
 </script>
 
 <template>
@@ -19,9 +16,7 @@ const imgURL = new URL(
     <p class="mb-10">{{ projectData.description }}</p>
     <TechStackButton class="w-max mb-5" :tech-stack="projectData.techStack" />
     <a v-if="projectData.githubURL != ''" :href="projectData.githubURL" target="_blank">
-      <FancyButton>
-        <GitHubIcon />GitHub
-      </FancyButton>
+      <FancyButton> <GitHubIconSVG class="w-5 h-5" style="margin-bottom: 2px" />GitHub </FancyButton>
     </a>
   </div>
 </template>

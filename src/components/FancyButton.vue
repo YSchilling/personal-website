@@ -2,7 +2,7 @@
 
 <template>
   <div id="wrapper" class="w-max">
-    <div id="button" class="flex justify-center gap-2 px-4 py-3">
+    <div id="button" class="flex justify-center items-center gap-2 px-4 py-3">
       <slot />
     </div>
   </div>
