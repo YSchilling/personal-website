@@ -25,7 +25,7 @@ function decode(string) {
 </script>
 
 <template>
-  <section id="mainsection" class="grid grid-cols-12">
+  <section id="mainsection" class="grid grid-cols-12 mt-64">
     <HeaderBar />
     <h1 class="text-4xl md:text-5xl xl:text-6xl col-start-3 col-span-8 mb-8">
       <b>Impressum</b>
