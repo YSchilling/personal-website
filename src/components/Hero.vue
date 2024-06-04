@@ -75,10 +75,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="grid grid-cols-12 grid-rows-3 min-h-screen">
+  <section class="grid grid-cols-12 min-h-screen items-center justify-center lg:justify-start">
     <HeaderBar></HeaderBar>
     <h1
-      class="text-4xl md:text-5xl xl:text-6xl mt-8 lg:mt-0 row-start-2 justify-self-center lg:justify-self-start col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 leading-tight flex items-center text-center lg:text-left">
+      class="text-4xl md:text-5xl xl:text-6xl mt-8 lg:mt-0 col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 leading-tight text-center lg:text-left">
       <b>
         Hey! I'm <span class="text-highlight">Yorick Schilling</span><br />
         A <span ref="header"></span><span ref="cursor">_</span>
@@ -90,11 +90,5 @@ onUnmounted(() => {
 <style scoped>
 .black {
   color: var(--main-bg-color);
-}
-
-@media (max-width: 1024px) {
-  section {
-    grid-template-rows: max-content 1fr 1fr;
-  }
 }
 </style>

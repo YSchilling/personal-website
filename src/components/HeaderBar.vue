@@ -1,5 +1,6 @@
 <script setup>
 import FancyButton from "./FancyButton.vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 // burger menu
 
@@ -9,16 +10,36 @@ function toggleBurger() {
   burger.classList.toggle("close");
   overlay.classList.toggle("overlay");
 }
+
+function toggleHeader() {
+  if (lastScrollPosition.value < window.scrollY) {
+    header.value.classList.add("header-up");
+    header.value.classList.remove("header-down");
+  } else {
+    header.value.classList.add("header-down");
+    header.value.classList.remove("header-up");
+  }
+
+  lastScrollPosition.value = window.scrollY;
+}
+
+const header = ref(null);
+const lastScrollPosition = ref(null);
+
+onMounted(() => addEventListener("scroll", toggleHeader));
+onUnmounted(() => removeEventListener("scroll", toggleHeader));
 </script>
 
 <template>
-  <header class="flex col-start-3 col-span-8 mt-16 lg:mt-24 mb-24 items-center justify-between h-6">
-    <router-link to="/" class="flex items-center">
+  <header
+    ref="header"
+    class="fixed w-full grid grid-cols-12 items-center h-16 mt-8 z-50 transition-all duration-500 header-down">
+    <router-link to="/" class="col-start-2 col-span-2 lg:col-start-3 lg:col-span-3 flex items-center">
       <img src="/logo.svg" alt="Logo" />
       <h2 class="text-2xl hidden lg:block">Yorick Schilling</h2>
     </router-link>
     <!-- START Desktop -->
-    <ul class="hidden lg:flex gap-4">
+    <ul class="hidden lg:flex gap-4 col-start-8 col-span-3 justify-self-end">
       <li>
         <router-link to="/">
           <FancyButton>Home</FancyButton>
@@ -38,7 +59,7 @@ function toggleBurger() {
     <!-- END Desktop -->
 
     <!-- START Mobile -->
-    <div @click="toggleBurger" id="burger-menu" class="lg:hidden">
+    <div @click="toggleBurger" id="burger-menu" class="lg:hidden col-start-10 col-span-2 justify-self-end">
       <span></span>
     </div>
     <!-- END Mobile -->
@@ -166,5 +187,13 @@ function toggleBurger() {
   font-size: 32px;
   margin-bottom: 30px;
   text-decoration: none;
+}
+
+.header-up {
+  top: -200%;
+}
+
+.header-down {
+  top: 0px;
 }
 </style>
