@@ -1,23 +1,42 @@
 [
-    {
-        "title": "Portfolio Website",
-        "fileName": "personal_website.jpg",
-        "description": "This is the website you are currently looking at :)",
-        "techStack": ["Vue", "TailwindCSS"],
-        "githubURL": "https://github.com/YSchilling/personal-website"
-    },
-    {
-        "title": "Snakepy",
-        "fileName": "snakepy.png",
-        "description": "A snake game made with python and pygame!",
-        "techStack": ["Python", "Pygame"],
-        "githubURL": "https://github.com/YSchilling/snakepy"
-    },
-    {
-        "title": "Reiki Website",
-        "fileName": "reiki_website.png",
-        "description": "My first client project!",
-        "techStack": ["HTML", "TailwindCSS", "JavaScript"],
-        "githubURL": "https://github.com/YSchilling/reiki-website"
-    }
+  {
+    "title": "Portfolio Website",
+    "fileName": "personal_website.jpg",
+    "description": "This is the website you are currently looking at :)",
+    "techStack": ["Vue", "TailwindCSS"],
+    "githubURL": "https://github.com/YSchilling/personal-website",
+    "projectURL": ""
+  },
+  {
+    "title": "Creative Coding Explorer",
+    "fileName": "",
+    "description": "Explore the enjoyment of creative coding",
+    "techStack": ["Vue", "P5.js"],
+    "githubURL": "",
+    "projectURL": "https://yorickschilling.com/creativecoding"
+  },
+  {
+    "title": "Home Lab",
+    "fileName": "",
+    "description": "I fell in love with the idea of self hosting my own applications. Therefore I bought a used pc and the journey started!",
+    "techStack": ["Linux", "Docker"],
+    "githubURL": "",
+    "projectURL": ""
+  },
+  {
+    "title": "Snakepy",
+    "fileName": "snakepy.png",
+    "description": "A snake game made with python and pygame!",
+    "techStack": ["Python", "Pygame"],
+    "githubURL": "https://github.com/YSchilling/snakepy",
+    "projectURL": ""
+  },
+  {
+    "title": "Reiki Website",
+    "fileName": "reiki_website.png",
+    "description": "The first website I build for a client!",
+    "techStack": ["HTML", "TailwindCSS", "JavaScript"],
+    "githubURL": "https://github.com/YSchilling/reiki-website",
+    "projectURL": ""
+  }
 ]

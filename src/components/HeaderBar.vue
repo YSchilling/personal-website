@@ -39,52 +39,35 @@ onUnmounted(() => removeEventListener("scroll", toggleHeader));
       <h2 class="text-2xl hidden lg:block">Yorick Schilling</h2>
     </router-link>
     <!-- START Desktop -->
-    <ul class="hidden lg:flex gap-4 col-start-8 col-span-3 justify-self-end">
-      <li>
-        <router-link to="/">
-          <FancyButton>Home</FancyButton>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/sketches">
-          <FancyButton>Sketches</FancyButton>
-        </router-link>
-      </li>
+    <ul class="flex gap-4 col-start-8 col-span-3 justify-self-end">
       <li>
         <router-link to="/linktree">
-          <FancyButton>Linktree</FancyButton>
+          <FancyButton class="px-2">Contact</FancyButton>
         </router-link>
       </li>
     </ul>
     <!-- END Desktop -->
-
-    <!-- START Mobile -->
+    <!-- MOBILE CURRENTLY NOT IN USE
+    <\!-- START Mobile --\>
     <div @click="toggleBurger" id="burger-menu" class="lg:hidden col-start-10 col-span-2 justify-self-end">
       <span></span>
     </div>
-    <!-- END Mobile -->
+    <\!-- END Mobile --\>
+-->
   </header>
-  <!-- START BURGER -->
+  <!-- MOBILE CURRENTLY NOT IN USE
+  <\!-- START BURGER --\>
   <div id="menu" class="lg:hidden">
     <ul>
-      <li class="flex justify-center">
-        <router-link to="/" class="w-max">
-          <FancyButton>Home</FancyButton>
-        </router-link>
-      </li>
-      <li class="flex justify-center">
-        <router-link to="/sketches" class="w-max">
-          <FancyButton>Sketches</FancyButton>
-        </router-link>
-      </li>
       <li class="flex justify-center">
         <router-link to="/linktree" class="w-max">
           <FancyButton>Linktree</FancyButton>
         </router-link>
       </li>
     </ul>
-    <!-- END BURGER -->
   </div>
+  <\!-- END BURGER --\>
+  -->
 </template>
 
 <style scoped>

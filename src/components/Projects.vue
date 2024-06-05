@@ -8,7 +8,7 @@ import GitHubIconSVG from "./icons/GitHubIconSVG.vue";
 <template>
   <section class="grid grid-cols-12 mb-64">
     <h2 class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-4xl self-end mb-8 font-roboto">
-      // <span class="text-highlight">Projects</span>
+      //<span class="text-highlight ml-2">Projects</span>
     </h2>
     <h2 class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 font-roboto mb-16">
       // Swipe to switch between projects!
