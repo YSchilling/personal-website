@@ -19,6 +19,7 @@
 
 #button:hover {
   color: var(--highlight-color);
+  cursor: pointer;
 }
 
 #button::before {

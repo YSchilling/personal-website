@@ -9,7 +9,7 @@ import PersonalWebsiteIcon from "../components/icons/PersonalWebsiteIcon.vue";
   <div class="flex flex-col justify-center items-center">
     <img
       class="w-24 h-24 border-transparent rounded-full mt-24 mb-4"
-      src="../assets/media/profile_picture.jpeg"
+      src="../assets/media/profile_picture.JPG"
       alt="Profile Picture" />
     <h5 class="text-white text-xl font-bold">Yorick Schilling</h5>
     <p class="text-gray-400 mb-4">Computer Science | Business | Travel</p>

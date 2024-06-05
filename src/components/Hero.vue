@@ -1,5 +1,4 @@
 <script setup>
-import HeaderBar from "./HeaderBar.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const header = ref();
@@ -76,9 +75,8 @@ onUnmounted(() => {
 
 <template>
   <section class="grid grid-cols-12 min-h-screen items-center justify-center lg:justify-start">
-    <HeaderBar></HeaderBar>
     <h1
-      class="text-4xl md:text-5xl xl:text-6xl mt-8 lg:mt-0 col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 leading-tight text-center lg:text-left">
+      class="text-4xl md:text-5xl xl:text-6xl mt-8 lg:mt-0 col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 leading-tight text-center lg:text-left font-poppins">
       <b>
         Hey! I'm <span class="text-highlight">Yorick Schilling</span><br />
         A <span ref="header"></span><span ref="cursor">_</span>

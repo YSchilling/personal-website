@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
   --main-bg-color: #111111;
@@ -11,6 +12,10 @@
 body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  font-family: "Inter", sans-serif;
+}
+
+.font-poppins {
   font-family: "Poppins", sans-serif;
 }
 

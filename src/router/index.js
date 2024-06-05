@@ -27,6 +27,11 @@ const router = createRouter({
       name: "Impressum",
       component: () => import("../views/Impressum.vue"),
     },
+    {
+      path: "/creativecoding",
+      name: "CreativeCoding",
+      component: () => import("../views/CreativeCoding.vue"),
+    },
   ],
 });
 
