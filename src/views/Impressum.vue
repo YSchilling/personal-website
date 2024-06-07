@@ -27,9 +27,7 @@ function decode(string) {
 <template>
   <HeaderBar />
   <section id="mainsection" class="grid grid-cols-12 mt-64">
-    <h1 class="text-4xl md:text-5xl xl:text-6xl col-start-3 col-span-8 mb-8">
-      <b>Impressum</b>
-    </h1>
+    <h1 class="text-4xl md:text-5xl xl:text-6xl col-start-3 col-span-8 mb-8 font-bold font-montserrat">Impressum</h1>
     <div class="col-start-3 col-span-8">
       <p class="mb-4">Angaben gemäß § 5 TMG</p>
       <button

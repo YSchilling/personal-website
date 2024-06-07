@@ -7,12 +7,15 @@ const isToggled = ref(false);
 
 <template>
   <div class="flex flex-col w-fit">
-    <button @click="isToggled = !isToggled" class="w-max mb-2 duration-200 border-b-2 hover:border-b-transparent">
-      Show tech stack
+    <button
+      @click="isToggled = !isToggled"
+      class="w-max mb-2 duration-200 hover:border-b-transparent"
+      style="border-bottom-width: 1px">
+      {{ isToggled ? "Hide" : "Show" }} tech stack
     </button>
     <TransitionGroup>
       <ol v-if="isToggled" class="flex flex-wrap">
-        <li v-for="tech in techStack" class="w-max px-4 py-2 mr-4 border border-white rounded-md">
+        <li v-for="tech in techStack" class="w-max px-4 py-2 mr-4 border border-white rounded-lg">
           {{ tech }}
         </li>
       </ol></TransitionGroup

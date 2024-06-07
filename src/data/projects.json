@@ -1,7 +1,7 @@
 [
   {
     "title": "Portfolio Website",
-    "fileName": "personal_website.jpg",
+    "fileName": "portfolio.png",
     "description": "This is the website you are currently looking at :)",
     "techStack": ["Vue", "TailwindCSS"],
     "githubURL": "https://github.com/YSchilling/personal-website",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Creative Coding Explorer",
-    "fileName": "",
+    "fileName": "creative_coding.png",
     "description": "Explore the enjoyment of creative coding",
     "techStack": ["Vue", "P5.js"],
     "githubURL": "",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Home Lab",
-    "fileName": "",
+    "fileName": "home_lab.png",
     "description": "I fell in love with the idea of self hosting my own applications. Therefore I bought a used pc and the journey started!",
     "techStack": ["Linux", "Docker"],
     "githubURL": "",

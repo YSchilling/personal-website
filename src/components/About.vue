@@ -2,7 +2,8 @@
 
 <template>
   <section class="grid grid-cols-12 mb-64">
-    <h2 class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-4xl self-end mb-8 font-roboto">
+    <h2
+      class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-4xl self-end mb-8 font-jetbrains font-semibold">
       //<span class="text-highlight ml-2">About</span>
     </h2>
     <p class="col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 lg:text-xl">

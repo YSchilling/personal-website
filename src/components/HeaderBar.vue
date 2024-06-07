@@ -33,7 +33,7 @@ onUnmounted(() => removeEventListener("scroll", toggleHeader));
 <template>
   <header
     ref="header"
-    class="fixed w-full grid grid-cols-12 items-center h-16 mt-8 z-50 transition-all duration-500 header-down">
+    class="fixed w-full grid grid-cols-12 items-center h-16 mt-8 z-40 transition-all duration-500 header-down">
     <router-link to="/" class="col-start-2 col-span-2 lg:col-start-3 lg:col-span-3 flex items-center">
       <img src="/logo.svg" alt="Logo" />
       <h2 class="text-2xl hidden lg:block">Yorick Schilling</h2>

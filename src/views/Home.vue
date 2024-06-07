@@ -9,8 +9,8 @@ import Footer from "../components/Footer.vue";
 <template>
   <HeaderBar />
   <Hero />
-  <About />
   <Projects />
+  <About />
   <Footer />
 </template>
 

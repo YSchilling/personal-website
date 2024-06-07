@@ -89,7 +89,7 @@ onUnmounted(() => {
 <template>
   <section class="grid grid-cols-12 h-screen items-center">
     <h1
-      class="h-40 md:h-auto text-4xl md:text-5xl xl:text-6xl col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-center lg:text-left font-poppins font-bold">
+      class="h-40 md:h-auto text-4xl md:text-5xl xl:text-6xl col-start-2 col-span-10 lg:col-start-3 lg:col-span-8 text-center lg:text-left font-montserrat font-bold">
       Hey! I'm <span class="text-highlight">Yorick Schilling</span><br />
       A <span ref="header"></span><span ref="cursor">_</span>
     </h1>
