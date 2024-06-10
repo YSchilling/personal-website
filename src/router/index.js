@@ -32,6 +32,11 @@ const router = createRouter({
       name: "CreativeCoding",
       component: () => import("../views/CreativeCoding.vue"),
     },
+    {
+      path: "/creativecoding/explorer",
+      name: "CreativeCodingExplorer",
+      component: () => import("../views/CCExplorer.vue"),
+    },
   ],
 });
 
