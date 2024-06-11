@@ -30,12 +30,17 @@ const router = createRouter({
     {
       path: "/creativecoding",
       name: "CreativeCoding",
-      component: () => import("../views/CreativeCoding.vue"),
+      component: () => import("../views/creative-coding/CCHero.vue"),
     },
     {
       path: "/creativecoding/explorer",
       name: "CreativeCodingExplorer",
-      component: () => import("../views/CCExplorer.vue"),
+      component: () => import("../views/creative-coding/CCExplorer.vue"),
+    },
+    {
+      path: "/creativecoding/viewer",
+      name: "CreativeCodingViewer",
+      component: () => import("../views/creative-coding/CCViewer.vue"),
     },
   ],
 });
