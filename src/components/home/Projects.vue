@@ -31,3 +31,28 @@ import GitHubIconSVG from "../icons/GitHubIconSVG.vue";
     </a>
   </section>
 </template>
+
+<style scoped>
+.swiper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 100%;
+  z-index: 20;
+  background-image: linear-gradient(90deg, #111, transparent);
+}
+.swiper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 100%;
+  z-index: 20;
+  background-image: linear-gradient(-90deg, #111, transparent);
+}
+</style>
