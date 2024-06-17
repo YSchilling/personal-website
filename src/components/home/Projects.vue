@@ -1,8 +1,8 @@
 <script setup>
 import ProjectCard from "./ProjectCard.vue";
-import projects from "../data/projects.json";
-import FancyButton from "./FancyButton.vue";
-import GitHubIconSVG from "./icons/GitHubIconSVG.vue";
+import projects from "../../data/projects.json";
+import FancyButton from "../FancyButton.vue";
+import GitHubIconSVG from "../icons/GitHubIconSVG.vue";
 </script>
 
 <template>

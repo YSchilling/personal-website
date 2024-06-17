@@ -1,11 +1,11 @@
 <script setup>
-import GitHubIconSVG from "./icons/GitHubIconSVG.vue";
-import TechStackButton from "./TechStackButton.vue";
-import FancyButton from "./FancyButton.vue";
-import LinkIcon from "./icons/LinkIcon.vue";
+import GitHubIconSVG from "../icons/GitHubIconSVG.vue";
+import TechStackButton from "../TechStackButton.vue";
+import FancyButton from "../FancyButton.vue";
+import LinkIcon from "../icons/LinkIcon.vue";
 
 const props = defineProps(["projectData"]);
-const imgURL = new URL(`../assets/media/projects/${props.projectData.fileName}`, import.meta.url).href;
+const imgURL = new URL(`../../assets/media/projects/${props.projectData.fileName}`, import.meta.url).href;
 </script>
 
 <template>

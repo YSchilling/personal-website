@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import ArrowDownIcon from "./icons/ArrowDownIcon.vue";
+import ArrowDownIcon from "../icons/ArrowDownIcon.vue";
 
 const header = ref();
 const cursor = ref();
