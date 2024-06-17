@@ -32,11 +32,11 @@
     "projectURL": ""
   },
   {
-    "title": "Reiki Website",
-    "fileName": "reiki_website.png",
-    "description": "The first website I build for a client!",
-    "techStack": ["HTML", "TailwindCSS", "JavaScript"],
-    "githubURL": "https://github.com/YSchilling/reiki-website",
+    "title": "Visions",
+    "fileName": "visions.png",
+    "description": "I am the Co-Founder of a small web agency!",
+    "techStack": ["HTML", "TailwindCSS", "Vue"],
+    "githubURL": "https://github.com/visions-development/portfolio",
     "projectURL": ""
   }
 ]

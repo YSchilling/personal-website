@@ -9,7 +9,7 @@ const imgURL = new URL(`../../assets/media/projects/${props.projectData.fileName
 </script>
 
 <template>
-  <div class="border border-white rounded p-4 flex flex-col flex-shrink-0 mx-4">
+  <div class="border border-white rounded p-4 flex flex-col mx-4">
     <img width="360" height="240" :src="imgURL" alt="" class="mb-6 border border-white self-center" />
     <h3 class="text-highlight text-2xl mb-3 font-semibold font-montserrat">
       {{ projectData.title }}
