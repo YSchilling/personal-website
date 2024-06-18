@@ -1,8 +1,18 @@
 <script setup>
 import { ref } from "vue";
 import HeaderBar from "../../components/HeaderBar.vue";
+import sketches from "../../data/sketches.json";
 
-const data = ref([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+let newSketches = ref(
+  sketches.map((sketch) => {
+    sketch.hover = false;
+    return sketch;
+  })
+);
+
+function getSketchURL(fileName, hover) {
+  return new URL(`../../assets/media/sketches/${fileName}.${hover ? "gif" : "png"}`, import.meta.url).href;
+}
 </script>
 
 <template>
@@ -17,8 +27,14 @@ const data = ref([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     </div>
     <div
       class="col-start-2 col-span-10 border border-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full overflow-auto p-2 gap-2">
-      <RouterLink to="/creativecoding/viewer" v-for="index of data"
-        ><img src="https://placehold.co/640x360" alt="Sketch" width="640" height="360"
+      <RouterLink to="/creativecoding/viewer" v-for="sketch in newSketches"
+        ><img
+          @mouseover="sketch.hover = true"
+          @mouseleave="sketch.hover = false"
+          :src="getSketchURL(sketch.fileName, sketch.hover)"
+          alt="Sketch"
+          width="640"
+          height="360"
       /></RouterLink>
     </div>
   </main>
