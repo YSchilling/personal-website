@@ -1,6 +1,7 @@
 <script setup>
-import FancyButton from "../components/FancyButton.vue";
-import HeaderBar from "../components/HeaderBar.vue";
+import FancyButton from "../../components/FancyButton.vue";
+import HeaderBar from "../../components/HeaderBar.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
@@ -10,8 +11,10 @@ import HeaderBar from "../components/HeaderBar.vue";
     <hr />
     <h2 class="text-base md:text-lg lg:text-2xl font-montserrat">Exploring the patterns in our informative world</h2>
     <hr />
-    <FancyButton class="text-base md:text-lg lg:text-2xl border px-4 md:px-8 py-1 md:py-2 mb-64 lg:mb-32"
-      >Start Exploring</FancyButton
+    <RouterLink to="/creativecoding/explorer">
+      <FancyButton class="text-base md:text-lg lg:text-2xl border px-4 md:px-8 py-1 md:py-2 mb-64 lg:mb-32"
+        >Start Exploring</FancyButton
+      ></RouterLink
     >
   </main>
 </template>

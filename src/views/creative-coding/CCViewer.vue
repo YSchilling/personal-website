@@ -4,13 +4,14 @@ import ArrowDownIcon2 from "../../components/icons/ArrowDownIcon2.vue";
 
 <template>
   <main class="flex flex-col items-center w-screen min-h-screen" style="padding-left: 10vw; padding-right: 10vw">
+    <RouterLink to="/creativecoding/explorer" class="text-3xl mt-16 self-end">X</RouterLink>
     <img
-      class="mt-16 w-auto"
+      class="w-auto"
       src="https://placehold.co/640x360"
       alt="Sketch"
       width="640"
       height="360"
-      style="aspect-ratio: 16/9; height: 75vh" />
+      style="aspect-ratio: 16/9; height: 70vh" />
     <h2 class="text-3xl my-8">Scroll to learn more</h2>
     <ArrowDownIcon2 class="mb-32" />
     <div class="border border-white p-12" style="margin-bottom: 15vh">
