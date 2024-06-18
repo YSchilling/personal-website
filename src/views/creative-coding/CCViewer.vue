@@ -6,7 +6,7 @@ function getSketchURL(fileName) {
 </script>
 
 <template>
-  <main class="flex flex-col items-center w-screen min-h-screen" style="padding-left: 10vw; padding-right: 10vw">
+  <main class="flex flex-col items-center w-full min-h-screen" style="padding-left: 10vw; padding-right: 10vw">
     <RouterLink to="/creativecoding/explorer" class="text-3xl mt-16 self-end">X</RouterLink>
     <img
       class="w-auto"
