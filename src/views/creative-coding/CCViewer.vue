@@ -1,5 +1,8 @@
 <script setup>
 import ArrowDownIcon2 from "../../components/icons/ArrowDownIcon2.vue";
+function getSketchURL(fileName) {
+  return new URL(`../../assets/media/sketches/${fileName}.gif`, import.meta.url).href;
+}
 </script>
 
 <template>
@@ -7,7 +10,7 @@ import ArrowDownIcon2 from "../../components/icons/ArrowDownIcon2.vue";
     <RouterLink to="/creativecoding/explorer" class="text-3xl mt-16 self-end">X</RouterLink>
     <img
       class="w-auto"
-      src="https://placehold.co/640x360"
+      :src="getSketchURL($route.params.sketch)"
       alt="Sketch"
       width="640"
       height="360"
