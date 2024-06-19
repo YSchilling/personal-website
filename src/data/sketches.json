@@ -2,25 +2,25 @@
   {
     "title": "2DPerlinNoise",
     "description": "Hey I am a short description!",
-    "code": "let xoff = 0;\nlet xoffStep = 0.003;\n\nfunction setup() {\n  createCanvas(640, 360);\n  stroke(255);\n  fill(0);\n}\n\nfunction draw() {\n  background(0);\n\n  beginShape();\n  for (let x = 0; x < width / 2; x++) {\n    let noisepara = xoff + x * xoffStep;\n    let y = map(noise(noisepara), 0, 1, 20, height - 20);\n    vertex(x, y);\n  }\n  endShape();\n\n  xoff += xoffStep;\n}\n",
+    "code": "let xoff = 0;\nlet xoffStep = 0.003;\n\np.setup = () => {\n  p.createCanvas(640, 360);\n  p.stroke(255);\n  p.fill(0);\n}\n\np.draw = () => {\n  p.background(0);\n\n  p.beginShape();\n  for (let x = 0; x < p.width / 2; x++) {\n    let noisepara = xoff + x * xoffStep;\n    let y = p.map(p.noise(noisepara), 0, 1, 20, p.height - 20);\n    p.vertex(x, y);\n  }\n  p.endShape();\n\n  xoff += xoffStep;\n}\n",
     "imgFileName": "2d_perlin_noise.png"
   },
   {
     "title": "Butterfly",
     "description": "Hey I am a short description!",
-    "code": "// globals\nlet t = 0;\n\n// params\nlet tIncrement = 0.05;\n\nfunction setup() {\n  createCanvas(640, 360);\n  background(0);\n}\n\nfunction draw() {\n  translate(width / 2, height / 2);\n\n  let v1 = createVector(x1(t), y1(t));\n\n  stroke(255);\n  point(-v1.x, -v1.y);\n\n  t += tIncrement;\n}\n\nfunction x1(t) {\n  return 50 * (sin(t) * (pow(Math.E, cos(t)) - 2*cos(4*t) - pow(sin(t/12), 5)));\n}\n\nfunction y1(t) {\n  return 50 * (cos(t) * (pow(Math.E, cos(t)) - 2*cos(4*t) - pow(sin(t/12), 5)));\n}\n",
+    "code": "// globals\nlet t = 0;\n\n// params\nlet tIncrement = 0.05;\n\np.setup = () => {\n  p.createCanvas(640, 360);\n  p.background(0);\n}\n\np.draw = () => {\n  p.translate(p.width / 2, p.height / 2);\n\n  let v1 = p.createVector(x1(t), y1(t));\n\n  p.stroke(255);\n  p.point(-v1.x, -v1.y);\n\n  t += tIncrement;\n}\n\nfunction x1(t) {\n  return 50 * (p.sin(t) * (p.pow(Math.E, p.cos(t)) - 2*p.cos(4*t) - p.pow(p.sin(t/12), 5)));\n}\n\nfunction y1(t) {\n  return 50 * (p.cos(t) * (p.pow(Math.E, p.cos(t)) - 2*p.cos(4*t) - p.pow(p.sin(t/12), 5)));\n}\n",
     "imgFileName": "butterfly.png"
   },
   {
     "title": "FadingLines",
     "description": "Hey I am a short description!",
-    "code": "// globals\nlet t = 0;\n\n// params\nlet tIncrement = 0.05;\n\nfunction setup() {\n  createCanvas(640, 360);\n}\n\nfunction draw() {\n  translate(width / 2, height / 2);\n\n  let v1 = createVector(x1(t), y1(t));\n  let v2 = createVector(x2(t), y2(t));\n\n  stroke(255);\n  line(v1.x, v1.y, v2.x, v2.y);\n\n  stroke(255, 0, 0);\n  line(-v1.x, v1.y, -v2.x, v2.y);\n\n  background(0, 10);\n\n  t += tIncrement;\n}\n\nfunction x1(t) {\n  return 30 * sin(t) + 20 * cos(t);\n}\n\nfunction y1(t) {\n  return 30 * cos(t) + 40 * sin(2 * t);\n}\n\nfunction x2(t) {\n  return sin(4 * t) + 100 * cos(t);\n}\n\nfunction y2(t) {\n  return 3 * cos(0.1 * t);\n}\n",
+    "code": "// globals\nlet t = 0;\n\n// params\nlet tIncrement = 0.05;\n\np.setup = () => {\n  p.createCanvas(640, 360);\n}\n\np.draw = () => {\n  p.translate(p.width / 2, p.height / 2);\n\n  let v1 = p.createVector(x1(t), y1(t));\n  let v2 = p.createVector(x2(t), y2(t));\n\n  p.stroke(255);\n  p.line(v1.x, v1.y, v2.x, v2.y);\n\n  p.stroke(255, 0, 0);\n  p.line(-v1.x, v1.y, -v2.x, v2.y);\n\n  p.background(0, 10);\n\n  t += tIncrement;\n}\n\nfunction x1(t) {\n  return 30 * p.sin(t) + 20 * p.cos(t);\n}\n\nfunction y1(t) {\n  return 30 * p.cos(t) + 40 * p.sin(2 * t);\n}\n\nfunction x2(t) {\n  return p.sin(4 * t) + 100 * p.cos(t);\n}\n\nfunction y2(t) {\n  return 3 * p.cos(0.1 * t);\n}\n",
     "imgFileName": "fading_lines.png"
   },
   {
     "title": "CrazyDots",
     "description": "Hey I am a short description!",
-    "code": "let dots = [];\nlet nDots = 100;\n\nfunction setup() {\n  createCanvas(640, 360);\n  background(0);\n  stroke(255);\n}\n\nfunction draw() {\n  background(0, 10);\n  \n  dots = [];\n  for (let i = 0; i < nDots; i++) {\n    let x = random(width);\n    let y = random(height);\n    dots.push(createVector(x, y));\n  }\n  \n  displayDots();\n}\n\nfunction displayDots() {\n  for (let i = 0; i < dots.length; i++) {\n    ellipse(dots[i].x, dots[i].y, 4, 4);\n  }\n}",
+    "code": "let dots = [];\nlet nDots = 100;\n\np.setup = () => {\n  p.createCanvas(640, 360);\n  p.background(0);\n  p.stroke(255);\n}\n\np.draw = () => {\n  p.background(0, 10);\n  \n  dots = [];\n  for (let i = 0; i < nDots; i++) {\n    let x = p.random(p.width);\n    let y = p.random(p.height);\n    dots.push(p.createVector(x, y));\n  }\n  \n  displayDots();\n}\n\nfunction displayDots() {\n  for (let i = 0; i < dots.length; i++) {\n    p.ellipse(dots[i].x, dots[i].y, 4, 4);\n  }\n}",
     "imgFileName": "crazy_dots.png"
   },
   {
