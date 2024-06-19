@@ -1,14 +1,16 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import p5 from "p5";
 
 const props = defineProps(["scriptCode"]);
 
+const canvas = ref(null);
+const runtime = ref(null);
+
 const sketch = new Function("p", props.scriptCode);
 
-const canvas = ref(null);
-
-onMounted(() => new p5(sketch, canvas.value));
+onMounted(() => (runtime.value = new p5(sketch, canvas.value)));
+onUnmounted(() => runtime.value.remove());
 </script>
 
 <template>

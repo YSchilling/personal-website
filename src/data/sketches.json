@@ -26,25 +26,19 @@
   {
     "title": "CrazyLines",
     "description": "Hey I am a short description!",
-    "code": "let dots = [];\nlet nDots = 100;\nlet xoff = 0;\nlet sn = 0;\n\nfunction setup() {\n  createCanvas(640, 360);\n  background(0);\n  stroke(255);\n  fill(0);\n}\n\nfunction draw() {\n  let sn = 0.005 + sin(xoff) * 0.005;\n  for (let i = 0; i < 100; i++) {\n    let x = random(width);\n    let y = random(height);\n    for (let j = 0; j < 50; j++) {\n      point(x, y);\n      x += noise(x * sn, y * sn, 0);\n      y += noise(x * sn, y * sn, 1);\n    }\n  }\n\n  // draw\n  background(0, 10);\n\n  // logic\n  xoff += 0.01;\n}\n",
+    "code": "let dots = [];\nlet nDots = 100;\nlet xoff = 0;\nlet sn = 0;\n\np.setup = () => {\n  p.createCanvas(640, 360);\n  p.background(0);\n  p.stroke(255);\n  p.fill(0);\n}\n\np.draw = () => {\n  let sn = 0.005 + p.sin(xoff) * 0.005;\n  for (let i = 0; i < 100; i++) {\n    let x = p.random(p.width);\n    let y = p.random(p.height);\n    for (let j = 0; j < 50; j++) {\n      p.point(x, y);\n      x += p.noise(x * sn, y * sn, 0);\n      y += p.noise(x * sn, y * sn, 1);\n    }\n  }\n\n  // draw\n  p.background(0, 10);\n\n  // logic\n  xoff += 0.01;\n}\n",
     "imgFileName": "crazy_lines.png"
   },
   {
     "title": "Cyclops",
     "description": "Hey I am a short description!",
-    "code": "x_off = 0;\nx_step = 0.005;\nball_count = 32;\nshadow_length = 64;\n\nfunction setup() {\n  //saveGif(\"cyclops\", 10);\n  createCanvas(640, 360);\n  strokeWeight(8);\n}\n\nfunction draw() {\n  background(0);\n  translate(width/2, height/2);\n  rotate(map(noise(x_off), 0, 1, -PI, PI));\n  \n  x_off += x_step;\n  \n  for (i=0; i<ball_count; i++) {\n    beginShape(LINES);\n    for (j=0; j<shadow_length; j++) {\n      stroke(map(j, 0, shadow_length, 0, 255));\n      radius = map(noise(x_off + x_step * j), 0, 1, 0, height/2);\n      vertex(radius, 0);\n    }\n    endShape();\n    rotate(2*PI/ball_count);\n  }\n}",
+    "code": "x_off = 0;\nx_step = 0.005;\nball_count = 32;\nshadow_length = 64;\n\np.setup = () => {\n  p.createCanvas(640, 360);\n  p.strokeWeight(8);\n}\n\np.draw = () => {\n  p.background(0);\n  p.translate(p.width/2, p.height/2);\n  p.rotate(p.map(p.noise(x_off), 0, 1, -p.PI, p.PI));\n  \n  x_off += x_step;\n  \n  for (i=0; i<ball_count; i++) {\n    p.beginShape(p.LINES);\n    for (j=0; j<shadow_length; j++) {\n      p.stroke(p.map(j, 0, shadow_length, 0, 255));\n      radius = p.map(p.noise(x_off + x_step * j), 0, 1, 0, p.height/2);\n      p.vertex(radius, 0);\n    }\n    p.endShape();\n    p.rotate(2*p.PI/ball_count);\n  }\n}",
     "imgFileName": "cyclops.png"
   },
   {
     "title": "Fireworks",
     "description": "Hey I am a short description!",
-    "code": "class Particle {\n  constructor(pos) {\n    this.pos = pos\n    this.vel = createVector(random(-1, 1), random(-1, 1))\n    this.vel.normalize()\n    this.vel.mult(random(0.1, 2))\n  }\n  \n  show() {\n    circle(this.pos.x, this.pos.y, 2)\n  }\n  \n  update() {\n    this.pos.add(this.vel)\n  }\n}\n\nclass ParticleSystem {\n  constructor(pos) {\n    this.baseColor = [random(255), random(255), random(255)]\n    this.lifetime = 255\n    this.particles = []\n    for(var i = 0; i < 500; i++) {\n      this.particles.push(new Particle(createVector(pos.x, pos.y)))\n    }\n  }\n  \n  update() {\n    this.lifetime -= 2\n    for(var particle of this.particles) {\n      particle.update()\n    }\n  }\n  \n  show() {\n    fill(color(this.baseColor[0], this.baseColor[1], this.baseColor[2], this.lifetime))\n    for(var particle of this.particles) {\n      particle.show()\n    }\n  }\n}\n\nvar systems = []\nvar counter = 0\n\nfunction setup() {\n  createCanvas(640, 360);\n  noStroke()\n}\n\nfunction draw() {\n  background(0)\n  \n  if(counter == 0) {\n    systems.push(new ParticleSystem(createVector(random(0, width), random(0, height))))\n    counter = 10\n  }\n  counter -= 1\n  \n  systems = systems.filter(system => system.lifetime >= 0)\n  \n  for(var system of systems) {\n    system.update()\n    system.show()\n  }\n}",
+    "code": "class Particle {\n  constructor(pos) {\n    this.pos = pos\n    this.vel = p.createVector(p.random(-1, 1), p.random(-1, 1))\n    this.vel.normalize()\n    this.vel.mult(p.random(0.1, 2))\n  }\n  \n  show() {\n    p.circle(this.pos.x, this.pos.y, 2)\n  }\n  \n  update() {\n    this.pos.add(this.vel)\n  }\n}\n\nclass ParticleSystem {\n  constructor(pos) {\n    this.baseColor = [p.random(255), p.random(255), p.random(255)]\n    this.lifetime = 255\n    this.particles = []\n    for(var i = 0; i < 500; i++) {\n      this.particles.push(new Particle(p.createVector(pos.x, pos.y)))\n    }\n  }\n  \n  update() {\n    this.lifetime -= 2\n    for(var particle of this.particles) {\n      particle.update()\n    }\n  }\n  \n  show() {\n    p.fill(p.color(this.baseColor[0], this.baseColor[1], this.baseColor[2], this.lifetime))\n    for(var particle of this.particles) {\n      particle.show()\n    }\n  }\n}\n\nvar systems = []\nvar counter = 0\n\np.setup = () => {\n  p.createCanvas(640, 360);\n  p.noStroke()\n}\n\np.draw = () => {\n  p.background(0)\n  \n  if(counter == 0) {\n    systems.push(new ParticleSystem(p.createVector(p.random(0, p.width), p.random(0, p.height))))\n    counter = 10\n  }\n  counter -= 1\n  \n  systems = systems.filter(system => system.lifetime >= 0)\n  \n  for(var system of systems) {\n    system.update()\n    system.show()\n  }\n}",
     "imgFileName": "fireworks.png"
-  },
-  {
-    "title": "GreenGlowingCircles",
-    "description": "Hey I am a short description!",
-    "code": "",
-    "imgFileName": "green_glowing_circles.png"
   }
 ]
