@@ -1,10 +1,9 @@
 <script setup>
-import { ref } from "vue";
 import HeaderBar from "../../components/HeaderBar.vue";
 import sketches from "../../data/sketches.json";
 
 function getSketchURL(fileName) {
-  return new URL(`../../assets/media/sketches/${fileName}.png`, import.meta.url).href;
+  return new URL(`../../assets/media/sketches/${fileName}`, import.meta.url).href;
 }
 </script>
 
@@ -20,8 +19,8 @@ function getSketchURL(fileName) {
     </div>
     <div
       class="col-start-2 col-span-10 border border-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full overflow-auto p-2 gap-2">
-      <RouterLink :to="`/creativecoding/viewer/${sketch.fileName}`" v-for="sketch in sketches"
-        ><img :src="getSketchURL(sketch.fileName)" alt="Sketch" width="640" height="360"
+      <RouterLink :to="`/creativecoding/viewer/${sketch.title}`" v-for="sketch in sketches"
+        ><img :src="getSketchURL(sketch.imgFileName)" alt="Sketch" width="640" height="360"
       /></RouterLink>
     </div>
   </main>

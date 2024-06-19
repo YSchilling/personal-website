@@ -41,7 +41,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #111;
 }
 
 ::-webkit-scrollbar-thumb {
